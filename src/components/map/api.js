@@ -14,7 +14,7 @@ export default function Api() {
         const data = querySnapshot.docs.map((doc) => doc.data());
         dispatch(updateMaps(data));
       });
-  });
+  }, [dispatch]);
 
   return null;
 }

@@ -4,29 +4,19 @@ import { useSelector } from "react-redux";
 import { StaticMap } from "react-map-gl";
 import Api from "./api";
 import getLayers from "./layers";
+import { MAPBOX_TOKEN, VENICE_VIEW_STATE } from "./config";
 
 export default function Map() {
-  const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
-
-  const INITIAL_VIEW_STATE = {
-    latitude: 45.437545,
-    longitude: 12.333794,
-    zoom: 13,
-    minZoom: 10,
-    pitch: 0,
-    bearing: 0,
-  };
-
-  const { maps } = useSelector((state) => state);
+  const { maps, selectedMap, opacity } = useSelector((state) => state);
 
   const _getLayers = () => {
-    return getLayers({ data: maps });
+    return getLayers({ data: maps, filter: selectedMap, opacity });
   };
 
   return (
     <div>
       <DeckGL
-        initialViewState={INITIAL_VIEW_STATE}
+        initialViewState={VENICE_VIEW_STATE}
         controller={true}
         layers={_getLayers()}
       >

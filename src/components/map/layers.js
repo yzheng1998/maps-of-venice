@@ -1,7 +1,7 @@
 import { TileLayer } from "@deck.gl/geo-layers";
 import { BitmapLayer } from "@deck.gl/layers";
 
-export default function getLayers({ data }) {
+export default function getLayers({ data, filter, opacity }) {
   const layers = [];
 
   for (var i in data) {
@@ -9,11 +9,12 @@ export default function getLayers({ data }) {
       new TileLayer({
         id: i,
         data: data[i].tile,
+        visible: data[i].year === filter,
 
         minZoom: 0,
         maxZoom: 19,
         tileSize: 256,
-        opacity: 0.2,
+        opacity,
 
         renderSubLayers: (props) => {
           const {
