@@ -5,10 +5,18 @@ export default function getLayers({ data, filter, opacity }) {
   const layers = [];
 
   for (var i in data) {
+    const prevUrl = data[i].tile;
+    const urls = [0, 1, 2, 3].map((j) => {
+      return prevUrl.replace(
+        "https://maps.georeferencer.com/georeferences/",
+        `https://maps-${j}.georeferencer.com//georeferences/`
+      );
+    });
+
     layers.push(
       new TileLayer({
         id: i,
-        data: data[i].tile,
+        data: urls,
         visible: data[i].year === filter,
 
         minZoom: 0,

@@ -27,7 +27,7 @@ export default function Timeline() {
         left: 0,
         right: 0,
         display: "flex",
-        width: 700,
+        width: 800,
         height: 30,
       }}
     >
