@@ -1,7 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateOpacity } from "../../store/actions";
+import { withStyles } from "@material-ui/core/styles";
 import Slider from "@material-ui/core/Slider";
+
+const StyledOpacitySlider = withStyles({
+  root: {
+    color: "#17bdff",
+    height: 4,
+  },
+})(Slider);
 
 export default function OpacitySlider() {
   const dispatch = useDispatch();
@@ -18,7 +26,7 @@ export default function OpacitySlider() {
         height: 30,
       }}
     >
-      <Slider
+      <StyledOpacitySlider
         value={Math.round(opacity * 100)}
         onChange={(e, value) => dispatch(updateOpacity(value / 100))}
         getAriaValueText={(value) => value}
@@ -28,6 +36,7 @@ export default function OpacitySlider() {
         min={0}
         max={100}
         marks
+        track="inverted"
       />
     </div>
   );

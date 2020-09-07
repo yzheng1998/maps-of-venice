@@ -2,6 +2,23 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSelectedMap } from "../../store/actions";
 import Slider from "@material-ui/core/Slider";
+import { withStyles } from "@material-ui/core/styles";
+import LineGraph from "../line-graph";
+
+const TimelineSlider = withStyles({
+  root: {
+    color: "#17bdff",
+    height: 4,
+  },
+  markLabel: {
+    fontSize: 14,
+  },
+  mark: {
+    width: 2,
+    height: 5,
+    marginTop: -2,
+  },
+})(Slider);
 
 export default function Timeline() {
   const dispatch = useDispatch();
@@ -14,34 +31,39 @@ export default function Timeline() {
 
   const marks = maps.map((map, i) => ({
     value: map.year,
-    label: map.year,
+    label:
+      i !== maps.length - 3 &&
+      (i === 0 || i === maps.length - 1 || maps[i - 1].year < map.year - 7)
+        ? map.year
+        : "",
   }));
 
   return (
     <div
       style={{
         position: "absolute",
-        bottom: 40,
+        bottom: 200,
         marginLeft: "auto",
         marginRight: "auto",
         left: 0,
         right: 0,
         display: "flex",
-        width: 800,
+        flexDirection: "column",
+        width: "80%",
         height: 30,
       }}
     >
-      <Slider
+      <LineGraph />
+      <TimelineSlider
         defaultValue={1603}
         onChange={(e, value) => dispatch(updateSelectedMap(value))}
-        getAriaValueText={(value) => value}
         valueLabelFormat={(value) => value}
-        aria-labelledby="discrete-slider-restrict"
         valueLabelDisplay="auto"
         min={minYear}
         max={maxYear}
         step={null}
         marks={marks}
+        track="normal"
       />
     </div>
   );
