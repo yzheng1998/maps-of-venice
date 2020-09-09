@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/maps-of-venice/static/css/main.5f361e03.chunk.css",
-    "main.js": "/maps-of-venice/static/js/main.3691063d.chunk.js",
-    "main.js.map": "/maps-of-venice/static/js/main.3691063d.chunk.js.map",
+    "main.css": "/maps-of-venice/static/css/main.eab24d3c.chunk.css",
+    "main.js": "/maps-of-venice/static/js/main.774758b0.chunk.js",
+    "main.js.map": "/maps-of-venice/static/js/main.774758b0.chunk.js.map",
     "runtime-main.js": "/maps-of-venice/static/js/runtime-main.ab4854c1.js",
     "runtime-main.js.map": "/maps-of-venice/static/js/runtime-main.ab4854c1.js.map",
-    "static/js/2.3ae920cc.chunk.js": "/maps-of-venice/static/js/2.3ae920cc.chunk.js",
-    "static/js/2.3ae920cc.chunk.js.map": "/maps-of-venice/static/js/2.3ae920cc.chunk.js.map",
+    "static/js/2.77c9a6f1.chunk.js": "/maps-of-venice/static/js/2.77c9a6f1.chunk.js",
+    "static/js/2.77c9a6f1.chunk.js.map": "/maps-of-venice/static/js/2.77c9a6f1.chunk.js.map",
     "index.html": "/maps-of-venice/index.html",
-    "precache-manifest.0ba715b96742f5922f441b2447ff9f0a.js": "/maps-of-venice/precache-manifest.0ba715b96742f5922f441b2447ff9f0a.js",
+    "precache-manifest.f40143dd6c0fe802e275880ff1a578fc.js": "/maps-of-venice/precache-manifest.f40143dd6c0fe802e275880ff1a578fc.js",
     "service-worker.js": "/maps-of-venice/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/maps-of-venice/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.3ae920cc.chunk.js.LICENSE.txt": "/maps-of-venice/static/js/2.3ae920cc.chunk.js.LICENSE.txt"
+    "static/css/main.eab24d3c.chunk.css.map": "/maps-of-venice/static/css/main.eab24d3c.chunk.css.map",
+    "static/js/2.77c9a6f1.chunk.js.LICENSE.txt": "/maps-of-venice/static/js/2.77c9a6f1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ab4854c1.js",
-    "static/js/2.3ae920cc.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.3691063d.chunk.js"
+    "static/js/2.77c9a6f1.chunk.js",
+    "static/css/main.eab24d3c.chunk.css",
+    "static/js/main.774758b0.chunk.js"
   ]
 }
