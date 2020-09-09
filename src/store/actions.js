@@ -22,3 +22,13 @@ export const TOGGLE_VISIBLE = "TOGGLE_VISIBLE";
 export function toggleVisible() {
   return { type: TOGGLE_VISIBLE };
 }
+
+export const UPDATE_GEOJSON = "UPDATE_GEOJSON";
+export function updateGeojson(data) {
+  return { type: UPDATE_GEOJSON, data };
+}
+
+export const UPDATE_HOVERED_OBJ = "UPDATE_HOVERED_OBJ";
+export function updateHoveredObj(data) {
+  return { type: UPDATE_HOVERED_OBJ, data };
+}

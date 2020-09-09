@@ -1,16 +1,41 @@
 import React from "react";
 import DeckGL from "@deck.gl/react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { updateHoveredObj } from "../../store/actions";
 import { StaticMap } from "react-map-gl";
 import Api from "./api";
 import getLayers from "./layers";
 import { MAPBOX_TOKEN, VENICE_VIEW_STATE } from "./config";
+import Tooltip from "../tooltip";
 
 export default function Map() {
-  const { maps, selectedMap, opacity, visible } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const { maps, selectedMap, opacity, visible, geojson } = useSelector(
+    (state) => state
+  );
+
+  const onHover = (info) => {
+    const { x, y, object } = info;
+    if (!object || object.properties.year <= selectedMap) {
+      dispatch(
+        updateHoveredObj({
+          x,
+          y,
+          obj: object,
+        })
+      );
+    }
+  };
 
   const _getLayers = () => {
-    return getLayers({ data: maps, filter: selectedMap, opacity, visible });
+    return getLayers({
+      data: maps,
+      currentYear: selectedMap,
+      opacity,
+      visible,
+      geojson,
+      onHover,
+    });
   };
 
   return (
@@ -23,6 +48,7 @@ export default function Map() {
         layers={_getLayers()}
       >
         <StaticMap mapboxApiAccessToken={MAPBOX_TOKEN} />
+        <Tooltip />
       </DeckGL>
       <Api />
     </div>
