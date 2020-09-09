@@ -7,17 +7,19 @@ import getLayers from "./layers";
 import { MAPBOX_TOKEN, VENICE_VIEW_STATE } from "./config";
 
 export default function Map() {
-  const { maps, selectedMap, opacity } = useSelector((state) => state);
+  const { maps, selectedMap, opacity, visible } = useSelector((state) => state);
 
   const _getLayers = () => {
-    return getLayers({ data: maps, filter: selectedMap, opacity });
+    return getLayers({ data: maps, filter: selectedMap, opacity, visible });
   };
 
   return (
     <div>
       <DeckGL
         initialViewState={VENICE_VIEW_STATE}
-        controller={true}
+        controller={{
+          dragRotate: false,
+        }}
         layers={_getLayers()}
       >
         <StaticMap mapboxApiAccessToken={MAPBOX_TOKEN} />

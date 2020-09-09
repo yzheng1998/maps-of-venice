@@ -17,3 +17,8 @@ export const UPDATE_OPACITY = "UPDATE_OPACITY";
 export function updateOpacity(data) {
   return { type: UPDATE_OPACITY, data };
 }
+
+export const TOGGLE_VISIBLE = "TOGGLE_VISIBLE";
+export function toggleVisible() {
+  return { type: TOGGLE_VISIBLE };
+}

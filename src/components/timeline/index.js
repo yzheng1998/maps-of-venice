@@ -12,6 +12,7 @@ const TimelineSlider = withStyles({
   },
   markLabel: {
     fontSize: 14,
+    fontFamily: "Avenir",
   },
   mark: {
     width: 2,
