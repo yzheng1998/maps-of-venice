@@ -11,13 +11,20 @@ const TimelineSlider = withStyles({
     color: "#17bdff",
     height: 4,
   },
+  track: {
+    height: 3,
+  },
+  rail: {
+    height: 3,
+  },
   markLabel: {
     fontSize: 14,
     fontFamily: "Avenir",
+    fontWeight: "bold",
   },
   mark: {
     width: 2,
-    height: 5,
+    height: 7,
     marginTop: -2,
   },
 })(Slider);

@@ -45,8 +45,8 @@ const MyResponsiveLine = ({ data }) => (
     axisTop={null}
     enableArea
     areaBaselineValue={90000}
-    areaOpacity={0.15}
-    lineWidth={2}
+    areaOpacity={0.2}
+    lineWidth={3}
     axisRight={null}
     axisBottom={null}
     axisLeft={null}
