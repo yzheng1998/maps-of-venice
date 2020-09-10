@@ -5,30 +5,27 @@ import { withStyles } from "@material-ui/core/styles";
 
 const StyledTitle = withStyles({
   root: {
-    fontSize: 16,
+    fontSize: 14,
     fontFamily: "Avenir",
   },
 })(Typography);
 
-export default function Title(props) {
-  const { visible } = props;
+export default function Help(props) {
+  const { visible, text } = props;
 
   return (
     <>
       {visible && (
         <div
           style={{
-            position: "absolute",
-            top: 30,
-            left: 40,
-            width: "15%",
             backgroundColor: "rgb(255, 255, 255, .7)",
             border: ".5px solid grey",
             borderRadius: "5px",
             padding: "2px",
+            margin: "5px 0px",
           }}
         >
-          <StyledTitle>Hold shift to compare with base map</StyledTitle>
+          <StyledTitle>{text}</StyledTitle>
         </div>
       )}
     </>

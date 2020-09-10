@@ -37,3 +37,8 @@ export const TOGGLE_PLAYING = "TOGGLE_PLAYING";
 export function togglePlaying() {
   return { type: TOGGLE_PLAYING };
 }
+
+export const TOGGLE_CONTROLS_VISIBLE = "TOGGLE_CONTROLS_VISIBLE";
+export function toggleControlsVisible() {
+  return { type: TOGGLE_CONTROLS_VISIBLE };
+}

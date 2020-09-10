@@ -14,6 +14,7 @@ const StyledCreator = withStyles({
   root: {
     fontSize: 20,
     fontFamily: "Avenir",
+    fontWeight: "bold",
   },
 })(Typography);
 

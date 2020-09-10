@@ -7,6 +7,7 @@ import {
   UPDATE_GEOJSON,
   UPDATE_HOVERED_OBJ,
   TOGGLE_PLAYING,
+  TOGGLE_CONTROLS_VISIBLE,
 } from "./actions";
 import initialState from "./initialState";
 
@@ -28,6 +29,8 @@ export default function reducer(state = initialState, action) {
       return { ...state, hoveredObj: action.data };
     case TOGGLE_PLAYING:
       return { ...state, playing: !state.playing };
+    case TOGGLE_CONTROLS_VISIBLE:
+      return { ...state, controlsVisible: !state.controlsVisible };
     default:
       return state;
   }
