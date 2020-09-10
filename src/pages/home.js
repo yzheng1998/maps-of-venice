@@ -5,7 +5,7 @@ import Timeline from "../components/timeline";
 import OpacitySlider from "../components/opacity-slider";
 import Title from "../components/title";
 import Help from "../components/help";
-import { toggleVisible } from "../store/actions";
+import { toggleVisible, togglePlaying } from "../store/actions";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -22,6 +22,11 @@ export default function Home() {
       }}
       onKeyUp={(e) => {
         e.nativeEvent.key === "Shift" && dispatch(toggleVisible());
+      }}
+      onKeyPress={(e) => {
+        if (e.key === " ") {
+          dispatch(togglePlaying());
+        }
       }}
     >
       <Map />

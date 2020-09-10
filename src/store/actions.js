@@ -32,3 +32,8 @@ export const UPDATE_HOVERED_OBJ = "UPDATE_HOVERED_OBJ";
 export function updateHoveredObj(data) {
   return { type: UPDATE_HOVERED_OBJ, data };
 }
+
+export const TOGGLE_PLAYING = "TOGGLE_PLAYING";
+export function togglePlaying() {
+  return { type: TOGGLE_PLAYING };
+}

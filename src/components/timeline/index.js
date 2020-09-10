@@ -44,24 +44,26 @@ export default function Timeline() {
     <div
       style={{
         position: "absolute",
-        bottom: 200,
+        bottom: 40,
         marginLeft: "auto",
         marginRight: "auto",
         left: 0,
         right: 0,
         display: "flex",
         flexDirection: "row",
-        width: "90%",
-        height: 30,
+        alignItems: "flex-end",
+        justifyContent: "center",
+        width: "100%",
       }}
     >
       <PlayPause />
       <div
         style={{
           display: "flex",
+          alignSelf: "center",
           flexDirection: "column",
           width: "80%",
-          height: 30,
+          marginRight: "5%",
         }}
       >
         <LineGraph />

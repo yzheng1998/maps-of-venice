@@ -6,6 +6,7 @@ const initialState = {
   visible: true,
   geojson: {},
   hoveredObj: {},
+  playing: false,
 };
 
 export default initialState;

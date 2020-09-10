@@ -1,14 +1,30 @@
-import React, { useState, useEffect } from "react";
-import Button from "@material-ui/core/Button";
+import React, { useEffect } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
+import PlayArrowIcon from "@material-ui/icons/PlayArrowRounded";
+import PauseIcon from "@material-ui/icons/PauseRounded";
 import { useSelector, useDispatch } from "react-redux";
-import { updateSelectedMap } from "../../store/actions";
+import { updateSelectedMap, togglePlaying } from "../../store/actions";
+
+const StyledIconButton = withStyles({
+  root: {
+    color: "#ffffff",
+    backgroundColor: "#17bdff",
+    borderRadius: 5,
+    width: 47,
+    height: 35,
+    marginRight: 36,
+    marginBottom: 34,
+    "&:hover": {
+      backgroundColor: "#3dc7ff",
+    },
+  },
+})(IconButton);
 
 export default function PlayPause() {
   const dispatch = useDispatch();
 
-  const [playing, setPlaying] = useState(false);
-
-  const { maps, selectedMap } = useSelector((state) => state);
+  const { maps, selectedMap, playing } = useSelector((state) => state);
   const years = maps.map((x) => x.year);
 
   useEffect(() => {
@@ -23,16 +39,12 @@ export default function PlayPause() {
   }, [playing, selectedMap, dispatch, years]);
 
   return (
-    <div style={{ alignSelf: "flex-end" }}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          setPlaying(!playing);
-        }}
-      >
-        {playing ? "Pause" : "Play"}
-      </Button>
-    </div>
+    <StyledIconButton
+      onClick={() => {
+        dispatch(togglePlaying());
+      }}
+    >
+      {playing ? <PauseIcon /> : <PlayArrowIcon />}
+    </StyledIconButton>
   );
 }
