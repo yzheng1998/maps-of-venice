@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "324181134931c3a24d98d666c2987616",
+    "revision": "94bb539f6d97be16961928444ef8b20e",
     "url": "/maps-of-venice/index.html"
   },
   {
-    "revision": "3cd1ee7271930877ba15",
+    "revision": "11cc71348fedf7ff69ea",
     "url": "/maps-of-venice/static/css/main.eab24d3c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maps-of-venice/static/js/2.d4462f35.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3cd1ee7271930877ba15",
-    "url": "/maps-of-venice/static/js/main.1a9c8faf.chunk.js"
+    "revision": "11cc71348fedf7ff69ea",
+    "url": "/maps-of-venice/static/js/main.80c2f236.chunk.js"
   },
   {
     "revision": "dd3d68179c1af949cbda",
