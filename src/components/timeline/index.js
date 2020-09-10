@@ -4,6 +4,7 @@ import { updateSelectedMap } from "../../store/actions";
 import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
 import LineGraph from "../line-graph";
+import PlayPause from "../play-pause";
 
 const TimelineSlider = withStyles({
   root: {
@@ -23,7 +24,7 @@ const TimelineSlider = withStyles({
 
 export default function Timeline() {
   const dispatch = useDispatch();
-  const { maps } = useSelector((state) => state);
+  const { maps, selectedMap } = useSelector((state) => state);
 
   const years = maps.map((map) => map.year);
 
@@ -49,23 +50,33 @@ export default function Timeline() {
         left: 0,
         right: 0,
         display: "flex",
-        flexDirection: "column",
-        width: "80%",
+        flexDirection: "row",
+        width: "90%",
         height: 30,
       }}
     >
-      <LineGraph />
-      <TimelineSlider
-        defaultValue={1603}
-        onChange={(e, value) => dispatch(updateSelectedMap(value))}
-        valueLabelFormat={(value) => value}
-        valueLabelDisplay="auto"
-        min={minYear}
-        max={maxYear}
-        step={null}
-        marks={marks}
-        track="normal"
-      />
+      <PlayPause />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "80%",
+          height: 30,
+        }}
+      >
+        <LineGraph />
+        <TimelineSlider
+          value={selectedMap}
+          onChange={(e, value) => dispatch(updateSelectedMap(value))}
+          valueLabelFormat={(value) => value}
+          valueLabelDisplay="auto"
+          min={minYear}
+          max={maxYear}
+          step={null}
+          marks={marks}
+          track="normal"
+        />
+      </div>
     </div>
   );
 }

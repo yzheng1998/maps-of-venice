@@ -40,6 +40,7 @@ export default function getLayers({
             data: null,
             image: props.data,
             bounds: [west, south, east, north],
+            opacity,
           });
         },
       })
