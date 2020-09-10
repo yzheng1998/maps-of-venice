@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/maps-of-venice/static/css/main.eab24d3c.chunk.css",
-    "main.js": "/maps-of-venice/static/js/main.80c2f236.chunk.js",
-    "main.js.map": "/maps-of-venice/static/js/main.80c2f236.chunk.js.map",
+    "main.js": "/maps-of-venice/static/js/main.d5ea1a2d.chunk.js",
+    "main.js.map": "/maps-of-venice/static/js/main.d5ea1a2d.chunk.js.map",
     "runtime-main.js": "/maps-of-venice/static/js/runtime-main.ab4854c1.js",
     "runtime-main.js.map": "/maps-of-venice/static/js/runtime-main.ab4854c1.js.map",
-    "static/js/2.d4462f35.chunk.js": "/maps-of-venice/static/js/2.d4462f35.chunk.js",
-    "static/js/2.d4462f35.chunk.js.map": "/maps-of-venice/static/js/2.d4462f35.chunk.js.map",
+    "static/js/2.4b820bdc.chunk.js": "/maps-of-venice/static/js/2.4b820bdc.chunk.js",
+    "static/js/2.4b820bdc.chunk.js.map": "/maps-of-venice/static/js/2.4b820bdc.chunk.js.map",
     "index.html": "/maps-of-venice/index.html",
-    "precache-manifest.b64f7372bdc4f3eca3032bbb834c7bb7.js": "/maps-of-venice/precache-manifest.b64f7372bdc4f3eca3032bbb834c7bb7.js",
+    "precache-manifest.f9d536f1b436a1388e2802580fe3237d.js": "/maps-of-venice/precache-manifest.f9d536f1b436a1388e2802580fe3237d.js",
     "service-worker.js": "/maps-of-venice/service-worker.js",
     "static/css/main.eab24d3c.chunk.css.map": "/maps-of-venice/static/css/main.eab24d3c.chunk.css.map",
-    "static/js/2.d4462f35.chunk.js.LICENSE.txt": "/maps-of-venice/static/js/2.d4462f35.chunk.js.LICENSE.txt"
+    "static/js/2.4b820bdc.chunk.js.LICENSE.txt": "/maps-of-venice/static/js/2.4b820bdc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ab4854c1.js",
-    "static/js/2.d4462f35.chunk.js",
+    "static/js/2.4b820bdc.chunk.js",
     "static/css/main.eab24d3c.chunk.css",
-    "static/js/main.80c2f236.chunk.js"
+    "static/js/main.d5ea1a2d.chunk.js"
   ]
 }
