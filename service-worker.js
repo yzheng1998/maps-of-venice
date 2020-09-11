@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/maps-of-venice/precache-manifest.af850b7be94a2834a56334cb16091c14.js"
+  "/maps-of-venice/precache-manifest.94430f3767506cb05c1555fc22108b14.js"
 );
 
 self.addEventListener('message', (event) => {

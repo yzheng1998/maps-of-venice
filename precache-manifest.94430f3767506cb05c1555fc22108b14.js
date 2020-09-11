@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "45b5bc74091891a5429b89b170688dff",
+    "revision": "e37048bf4372d247a8babedc99227deb",
     "url": "/maps-of-venice/index.html"
   },
   {
