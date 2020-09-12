@@ -5,6 +5,7 @@ import Slider from "@material-ui/core/Slider";
 import { withStyles } from "@material-ui/core/styles";
 import LineGraph from "../line-graph";
 import PlayPause from "../play-pause";
+import Subtitle from "../subtitle";
 
 const TimelineSlider = withStyles({
   root: {
@@ -63,7 +64,21 @@ export default function Timeline() {
         width: "100%",
       }}
     >
-      <PlayPause />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginRight: 12,
+          marginBottom: 34,
+        }}
+      >
+        <Subtitle
+          text="Population:"
+          style={{ marginBottom: 47, fontWeight: "bold" }}
+        />
+        <PlayPause />
+      </div>
       <div
         style={{
           display: "flex",

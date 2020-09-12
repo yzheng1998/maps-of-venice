@@ -11,7 +11,7 @@ const StyledTitle = withStyles({
 })(Typography);
 
 export default function Help(props) {
-  const { visible, text } = props;
+  const { visible, text, style } = props;
 
   return (
     <>
@@ -23,6 +23,7 @@ export default function Help(props) {
             borderRadius: "5px",
             padding: "2px",
             margin: "5px 0px",
+            ...style,
           }}
         >
           <StyledTitle>{text}</StyledTitle>

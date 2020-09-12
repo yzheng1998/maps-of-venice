@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   const dispatch = useDispatch();
-  const { visible, controlsVisible } = useSelector((state) => state);
+  const { visible, controlsVisible, playing } = useSelector((state) => state);
   const [helpVisible, setHelpVisible] = useState(true);
   // const [controlsVisibleLocal, setControlsVisibleLocal] = useState(true);
 
@@ -26,6 +26,7 @@ export default function Home() {
         }
         if (e.nativeEvent.key === "Alt" && controlsVisible) {
           dispatch(toggleControlsVisible());
+          playing && dispatch(togglePlaying());
           // setControlsVisibleLocal(false);
         }
       }}

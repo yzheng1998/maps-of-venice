@@ -13,8 +13,6 @@ const StyledIconButton = withStyles({
     borderRadius: 5,
     width: 47,
     height: 35,
-    marginRight: 36,
-    marginBottom: 34,
     "&:hover": {
       backgroundColor: "#3dc7ff",
     },
